@@ -8,6 +8,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.BounceInterpolator;
+import android.widget.ImageView;
 
 public class DropCoinActivity extends AppCompatActivity {
 
@@ -26,6 +29,12 @@ public class DropCoinActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        ImageView imageView = (ImageView) findViewById(R.id.imageView);
+
+        float bottomOfScreen = getResources().getDisplayMetrics().heightPixels - (imageView.getHeight() * 4);
+
+        imageView.animate().translationY(bottomOfScreen).setInterpolator(new AccelerateInterpolator()).setInterpolator(new BounceInterpolator()).setDuration(2000);
     }
 
     @Override

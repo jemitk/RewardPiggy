@@ -12,4 +12,11 @@
     tools:context="com.karenjhlee.myapplication.DropCoinActivity"
     tools:showIn="@layout/activity_drop_coin">
 
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/quarter"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
